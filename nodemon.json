@@ -2,6 +2,6 @@
     "env":{
         "MONGO_USER": "taiwo",
         "MONGO_PASSWPORD": "Bolanle01",
-        "MONGO_DEFAULT_DATABASE": "ayolee"
+        "MONGO_DEFAULT_DATABASE": "fidsapparel"
     }
 }
