@@ -18,8 +18,8 @@ exports.fetchDetails = async (req, res, next) => {
       totalItems += parseFloat(products[i].currentQty);
     }
     for (i = 0; i < reports.length; i++) {
-      totalSalesMade += parseFloat(reports[i].totalPrice);
-      totalProfitMade += parseFloat(reports[i].quantity) * (parseFloat(reports[i].unitPrice) - parseFloat(reports[i].costPrice));
+      totalSalesMade += parseFloat(reports[i].unitPrice);
+      totalProfitMade += parseFloat(reports[i].unitPrice) - parseFloat(reports[i].costPrice);
     }
     var storeDetails =  {
       cpNetWorth: cpNetWorth.toString(),
@@ -33,5 +33,4 @@ exports.fetchDetails = async (req, res, next) => {
     console.log(err);
     return res.status(500).send({ error: "true", message: "Database operation failed, please try again" });
   }
-
 }  

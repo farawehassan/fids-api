@@ -17,18 +17,20 @@ exports.addNewDailyReport = (req, res, next) => {
   const dress = req.body.dress;
   const quantity = req.body.quantity;
   const productName = req.body.productName;
+  const printPrice = req.body.printPrice;
+  const tailorPrice = req.body.tailorPrice;
   const costPrice = req.body.costPrice;
   const unitPrice = req.body.unitPrice;
-  const totalPrice = req.body.totalPrice;
   const paymentMode = req.body.paymentMode;
   const createdAt = req.body.createdAt;
   const report = new Report({
     dress: dress,
     quantity: quantity,
     productName: productName,
+    printPrice: printPrice,
+    tailorPrice: tailorPrice,
     costPrice: costPrice,
-    unitPrice: unitPrice,
-    totalPrice: totalPrice,
+    unitPrice: unitPrice,    
     paymentMode: paymentMode,
     createdAt: createdAt
   });

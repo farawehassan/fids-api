@@ -14,16 +14,20 @@ const reportSchema = new Schema({
   productName: {
     type: String,
     required: true,
+  },  
+  printPrice: {
+    type: Number,
+    required: true,
+  },  
+  tailorPrice: {
+    type: Number,
+    required: true,
   },
   costPrice: {
     type: Number,
     required: true,
   },
   unitPrice: {
-    type: Number,
-    required: true,
-  },
-  totalPrice: {
     type: Number,
     required: true,
   },
